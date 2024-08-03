@@ -9,7 +9,8 @@ class HomeService extends GetxService {
   // cargar api_key del environment
   final _apiKey = dotenv.env["NASA_API_KEY"];
   final _imgCount = dotenv.env["IMAGE_COUNT"] ?? 25;
-  // cargar imagnes del api
+  
+  // cargar imagenes del api
   Future<List<NasaImgModel>?> fetchNasaImgModel() async {
     
     var url =

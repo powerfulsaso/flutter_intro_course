@@ -6,7 +6,7 @@ import 'package:get/get.dart';
 
 class HomeScreen extends StatelessWidget {
   HomeScreen({super.key});
-  final _homeController = Get.put(HomeController());
+  final _homeController = Get.put(HomeController()); // instanciar el controlador
 
   @override
   Widget build(BuildContext context) {
@@ -58,6 +58,7 @@ class HomeScreen extends StatelessWidget {
                                 );
                               }),
                         )),
-        ));
+        )
+        );
   }
 }

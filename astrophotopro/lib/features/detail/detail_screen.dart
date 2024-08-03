@@ -26,7 +26,7 @@ class DetailScreen extends StatelessWidget {
             Expanded(
                 flex: 2,
                 child: InkWell(
-                  child: Image.network(imgDetail.url!),
+                  child: imgDetail.url == null ? const Text('no image'):  Image.network(imgDetail.url!), // validacion por url null
                   onTap: () => Get.to(OnlyPhotoScreen(hdUrl: imgDetail.hdurl!)),
                 )),
             const SizedBox(

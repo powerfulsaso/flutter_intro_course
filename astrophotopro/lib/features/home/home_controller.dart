@@ -5,13 +5,15 @@ import 'package:get/get.dart';
 
 class HomeController extends GetxController {
   RxList<NasaImgModel> nasaImages = RxList(); //la lista inicia vacia
+  //var nasaImages2 = <NasaImgModel>[].obs; // variante de creacion de lista observable
   var isLoading = false.obs;
 
   @override
   void onInit() {
-    _fetchImages();
+    _fetchImages(); // llamar al metodo fetch privado
     super.onInit();
   }
+
 
   Future<void> _fetchImages() async {
     try {
@@ -27,6 +29,7 @@ class HomeController extends GetxController {
         message,
         backgroundColor: Colors.red.shade300,
         snackPosition: SnackPosition.TOP,
+        duration: const Duration(seconds: 5),
       );
     } finally {
       isLoading.value = false;

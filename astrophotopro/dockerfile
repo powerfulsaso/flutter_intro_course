@@ -1,2 +1,5 @@
 FROM httpd:2.4
+# publica en la raiz del servidor web
 COPY ./build/web/ /usr/local/apache2/htdocs/
+# publica en un directorio del servidor web
+# COPY ./build/web/ /usr/local/apache2/htdocs/astro/
