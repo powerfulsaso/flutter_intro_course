@@ -20,12 +20,13 @@ NasaImgModel _$NasaImgModelFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$NasaImgModel {
-  String get title => throw _privateConstructorUsedError;
-  String get explanation => throw _privateConstructorUsedError;
-  String get url => throw _privateConstructorUsedError;
-  String get hdurl => throw _privateConstructorUsedError;
-  DateTime get date => throw _privateConstructorUsedError;
+  String? get title => throw _privateConstructorUsedError;
+  String? get explanation => throw _privateConstructorUsedError;
+  String? get url => throw _privateConstructorUsedError;
+  String? get hdurl => throw _privateConstructorUsedError;
+  DateTime? get date => throw _privateConstructorUsedError;
   String? get copyRight => throw _privateConstructorUsedError;
+  String? get media_type => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -40,12 +41,13 @@ abstract class $NasaImgModelCopyWith<$Res> {
       _$NasaImgModelCopyWithImpl<$Res, NasaImgModel>;
   @useResult
   $Res call(
-      {String title,
-      String explanation,
-      String url,
-      String hdurl,
-      DateTime date,
-      String? copyRight});
+      {String? title,
+      String? explanation,
+      String? url,
+      String? hdurl,
+      DateTime? date,
+      String? copyRight,
+      String? media_type});
 }
 
 /// @nodoc
@@ -61,37 +63,42 @@ class _$NasaImgModelCopyWithImpl<$Res, $Val extends NasaImgModel>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? title = null,
-    Object? explanation = null,
-    Object? url = null,
-    Object? hdurl = null,
-    Object? date = null,
+    Object? title = freezed,
+    Object? explanation = freezed,
+    Object? url = freezed,
+    Object? hdurl = freezed,
+    Object? date = freezed,
     Object? copyRight = freezed,
+    Object? media_type = freezed,
   }) {
     return _then(_value.copyWith(
-      title: null == title
+      title: freezed == title
           ? _value.title
           : title // ignore: cast_nullable_to_non_nullable
-              as String,
-      explanation: null == explanation
+              as String?,
+      explanation: freezed == explanation
           ? _value.explanation
           : explanation // ignore: cast_nullable_to_non_nullable
-              as String,
-      url: null == url
+              as String?,
+      url: freezed == url
           ? _value.url
           : url // ignore: cast_nullable_to_non_nullable
-              as String,
-      hdurl: null == hdurl
+              as String?,
+      hdurl: freezed == hdurl
           ? _value.hdurl
           : hdurl // ignore: cast_nullable_to_non_nullable
-              as String,
-      date: null == date
+              as String?,
+      date: freezed == date
           ? _value.date
           : date // ignore: cast_nullable_to_non_nullable
-              as DateTime,
+              as DateTime?,
       copyRight: freezed == copyRight
           ? _value.copyRight
           : copyRight // ignore: cast_nullable_to_non_nullable
+              as String?,
+      media_type: freezed == media_type
+          ? _value.media_type
+          : media_type // ignore: cast_nullable_to_non_nullable
               as String?,
     ) as $Val);
   }
@@ -106,12 +113,13 @@ abstract class _$$NasaImageImplCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {String title,
-      String explanation,
-      String url,
-      String hdurl,
-      DateTime date,
-      String? copyRight});
+      {String? title,
+      String? explanation,
+      String? url,
+      String? hdurl,
+      DateTime? date,
+      String? copyRight,
+      String? media_type});
 }
 
 /// @nodoc
@@ -125,37 +133,42 @@ class __$$NasaImageImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? title = null,
-    Object? explanation = null,
-    Object? url = null,
-    Object? hdurl = null,
-    Object? date = null,
+    Object? title = freezed,
+    Object? explanation = freezed,
+    Object? url = freezed,
+    Object? hdurl = freezed,
+    Object? date = freezed,
     Object? copyRight = freezed,
+    Object? media_type = freezed,
   }) {
     return _then(_$NasaImageImpl(
-      title: null == title
+      title: freezed == title
           ? _value.title
           : title // ignore: cast_nullable_to_non_nullable
-              as String,
-      explanation: null == explanation
+              as String?,
+      explanation: freezed == explanation
           ? _value.explanation
           : explanation // ignore: cast_nullable_to_non_nullable
-              as String,
-      url: null == url
+              as String?,
+      url: freezed == url
           ? _value.url
           : url // ignore: cast_nullable_to_non_nullable
-              as String,
-      hdurl: null == hdurl
+              as String?,
+      hdurl: freezed == hdurl
           ? _value.hdurl
           : hdurl // ignore: cast_nullable_to_non_nullable
-              as String,
-      date: null == date
+              as String?,
+      date: freezed == date
           ? _value.date
           : date // ignore: cast_nullable_to_non_nullable
-              as DateTime,
+              as DateTime?,
       copyRight: freezed == copyRight
           ? _value.copyRight
           : copyRight // ignore: cast_nullable_to_non_nullable
+              as String?,
+      media_type: freezed == media_type
+          ? _value.media_type
+          : media_type // ignore: cast_nullable_to_non_nullable
               as String?,
     ));
   }
@@ -165,33 +178,42 @@ class __$$NasaImageImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$NasaImageImpl implements _NasaImage {
   const _$NasaImageImpl(
-      {required this.title,
-      required this.explanation,
-      required this.url,
-      required this.hdurl,
-      required this.date,
-      this.copyRight = null});
+      {this.title = 'title',
+      this.explanation = 'explanation',
+      this.url = 'url',
+      this.hdurl = 'hdurl',
+      this.date = null,
+      this.copyRight = null,
+      this.media_type = 'media_type'});
 
   factory _$NasaImageImpl.fromJson(Map<String, dynamic> json) =>
       _$$NasaImageImplFromJson(json);
 
   @override
-  final String title;
+  @JsonKey()
+  final String? title;
   @override
-  final String explanation;
+  @JsonKey()
+  final String? explanation;
   @override
-  final String url;
+  @JsonKey()
+  final String? url;
   @override
-  final String hdurl;
+  @JsonKey()
+  final String? hdurl;
   @override
-  final DateTime date;
+  @JsonKey()
+  final DateTime? date;
   @override
   @JsonKey()
   final String? copyRight;
+  @override
+  @JsonKey()
+  final String? media_type;
 
   @override
   String toString() {
-    return 'NasaImgModel(title: $title, explanation: $explanation, url: $url, hdurl: $hdurl, date: $date, copyRight: $copyRight)';
+    return 'NasaImgModel(title: $title, explanation: $explanation, url: $url, hdurl: $hdurl, date: $date, copyRight: $copyRight, media_type: $media_type)';
   }
 
   @override
@@ -206,13 +228,15 @@ class _$NasaImageImpl implements _NasaImage {
             (identical(other.hdurl, hdurl) || other.hdurl == hdurl) &&
             (identical(other.date, date) || other.date == date) &&
             (identical(other.copyRight, copyRight) ||
-                other.copyRight == copyRight));
+                other.copyRight == copyRight) &&
+            (identical(other.media_type, media_type) ||
+                other.media_type == media_type));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, title, explanation, url, hdurl, date, copyRight);
+  int get hashCode => Object.hash(
+      runtimeType, title, explanation, url, hdurl, date, copyRight, media_type);
 
   @JsonKey(ignore: true)
   @override
@@ -230,28 +254,31 @@ class _$NasaImageImpl implements _NasaImage {
 
 abstract class _NasaImage implements NasaImgModel {
   const factory _NasaImage(
-      {required final String title,
-      required final String explanation,
-      required final String url,
-      required final String hdurl,
-      required final DateTime date,
-      final String? copyRight}) = _$NasaImageImpl;
+      {final String? title,
+      final String? explanation,
+      final String? url,
+      final String? hdurl,
+      final DateTime? date,
+      final String? copyRight,
+      final String? media_type}) = _$NasaImageImpl;
 
   factory _NasaImage.fromJson(Map<String, dynamic> json) =
       _$NasaImageImpl.fromJson;
 
   @override
-  String get title;
+  String? get title;
   @override
-  String get explanation;
+  String? get explanation;
   @override
-  String get url;
+  String? get url;
   @override
-  String get hdurl;
+  String? get hdurl;
   @override
-  DateTime get date;
+  DateTime? get date;
   @override
   String? get copyRight;
+  @override
+  String? get media_type;
   @override
   @JsonKey(ignore: true)
   _$$NasaImageImplCopyWith<_$NasaImageImpl> get copyWith =>
